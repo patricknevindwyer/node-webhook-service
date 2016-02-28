@@ -1,6 +1,20 @@
 "use strict";
 
 var request = require("request");
+/*
+    This module conforms to a standard Webhook based round trip.
+    
+    1. POST /resolve  (JSON body) - data to resolve
+    2. enqueue data for resolve
+    3. interval check for resolve data in queue
+    4. Resolve top item from queue
+    5. Store resolved data
+    6. Tickle remote webhook for "completed" state
+      6a. GET <remote>:/<webhook>/<item_id>/resolved
+    7. GET /resolved/<item_id>
+    8. DELETE /resolved/<item_id>
+
+*/
 
 module.exports = {
     
