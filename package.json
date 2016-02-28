@@ -1,0 +1,25 @@
+{
+  "name": "webhook-service",
+  "version": "0.0.2",
+  "description": "Common library for Otter webhook based service backends",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Error: no test specified' && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/patricknevindwyer/node-webhook-service.git"
+  },
+  "keywords": [
+    "webhook",
+    "queue"
+  ],
+  "author": "Patrick Nevin Dwyer <patricknevindwyer@gmail.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/patricknevindwyer/node-webhook-service/issues"
+  },
+  "dependencies": {
+    "request": "^2.69.0"
+  }
+}
